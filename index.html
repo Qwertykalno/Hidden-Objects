@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body style="background-image: url(House.jpg); background-size: cover;">
+	<div style="background: #89d656; width: 150px; height: 300px;">
+		<h2 class="textbooks" style="color: white;">1.Книга</h2>
+		<h2 class="textcup" style="color: white;">2.Чашки</h2>
+		<h2 class="textbox" style="color: white;">3.Коробка</h2>
+		<h2 class="textvila" style="color: white;">4.Вила</h2>
+
+		<h1 style="color: white;">Очки: <span class="Score">0</span></h1>
+    </div>
+
+    <img src="Books.png" style="height: 100px; position: absolute; top: 750px; left: 1000px;" class="Books">
+    <img src="Cups.png" style="height: 100px; position: absolute; top: 800px; left: 400px;" class="Cups">
+    <img src="Box.png" style="height: 100px; position: absolute; top: 200px; left: 1500px;" class="Box">
+    <img src="Vila.png" style="height: 100px; position: absolute; top: 800px; left: 1500px;" class="Vila">
+    <img src="win.jpg" style="height: 400px; position: absolute; top: 250px; left: 750px; display: none;" class="win">
+
+    <script type="text/javascript">
+    	let point = 0
+    	document.querySelector('.Books').onclick = function () {
+    		alert('Books')
+    		document.querySelector('.Books').style.display = 'none'
+    		document.querySelector('.textbooks').style.textDecoration = 'line-through'
+    		point = point + 1
+    		if (point==4) {
+    		document.querySelector('.win').style.display = "block"
+    		}
+    		document.querySelector('.Score').innerHTML = point
+    	}
+    	document.querySelector('.Cups').onclick = function () {
+    		alert('Cups')
+    		document.querySelector('.Cups').style.display = 'none'
+    		document.querySelector('.textcup').style.textDecoration = 'line-through'
+    		point = point + 1
+    		if (point==4) {
+    		document.querySelector('.win').style.display = "block"
+    		}
+    		document.querySelector('.Score').innerHTML = point
+    	}
+    	document.querySelector('.Box').onclick = function () {
+    		alert('Box')
+    		document.querySelector('.Box').style.display = 'none'
+    		document.querySelector('.textbox').style.textDecoration = 'line-through'
+    		point = point + 1
+    		if (point==4) {
+    		document.querySelector('.win').style.display = "block"
+    		}
+    		document.querySelector('.Score').innerHTML = point
+    	}
+    	document.querySelector('.Vila').onclick = function () {
+    		alert('Vila')
+    		document.querySelector('.Vila').style.display = 'none'
+    		document.querySelector('.textvila').style.textDecoration = 'line-through'
+    		point = point + 1
+    		if (point==4) {
+    		document.querySelector('.win').style.display = "block"
+    		}
+    		document.querySelector('.Score').innerHTML = point
+    	}
+    </script>
+</body>		
+</html>
